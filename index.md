@@ -17,7 +17,7 @@ Here is some **text**
 
 [jekyllrb.com/][5] 
 
-An image: ![echo sonos](img/echo_sonos7.jpg)
+An image: ![echo sonos](img/echo_sonos7.png)
 
   [1]: https://pages.github.com/
   [2]: https://slzatz.github.io/test
