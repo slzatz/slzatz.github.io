@@ -9,7 +9,7 @@ Will cover:
 
 [Github Pages](pages.github.com/) 
 
-[Display Info](/test) 
+[Display Info](/diplay_info) 
 
 The design of Echo Sonos: ![echo sonos](img/echo_sonos7.png)
 
