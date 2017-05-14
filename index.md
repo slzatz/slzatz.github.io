@@ -17,6 +17,8 @@ Here is some **text**
 
 [jekyllrb.com/][5] 
 
+An image: ![echo sonos](img/echo_sonos7.jpg)
+
   [1]: https://pages.github.com/
   [2]: https://slzatz.github.io/test
   [3]: https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/
