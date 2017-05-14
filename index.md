@@ -1,26 +1,15 @@
-# Here is h1 heading
+# Home for some semi-permanent documentation so I can remember what I did
 
-Here is some **text**
+Will cover:
 
-- one
-- two
-- three
+- listmanger
+- echo sonos
+- display info
 
 
-[pages.github.com/][1] 
+[Github Pages](pages.github.com/) 
 
-[slzatz.github.io/test][2] 
+[Display Info](/test) 
 
-[help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/][3] 
+The design of Echo Sonos: ![echo sonos](img/echo_sonos7.png)
 
-[jekyllrb.com/docs/quickstart/][4] 
-
-[jekyllrb.com/][5] 
-
-An image: ![echo sonos](img/echo_sonos7.png)
-
-  [1]: https://pages.github.com/
-  [2]: https://slzatz.github.io/test
-  [3]: https://help.github.com/articles/using-jekyll-as-a-static-site-generator-with-github-pages/
-  [4]: https://jekyllrb.com/docs/quickstart/
-  [5]: https://jekyllrb.com/
