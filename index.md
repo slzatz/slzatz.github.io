@@ -9,11 +9,9 @@ Will cover:
 
 [Github Pages](pages.github.com/) 
 
-[Display Info](/display_info) 
-
 [queue2solr.py](/queue2solr) 
 
-[Display Info](/info_display) 
+[Info Display](/info_display) 
 
 The design of Echo Sonos: ![echo sonos](img/echo_sonos7.png)
 
