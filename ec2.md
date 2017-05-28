@@ -23,6 +23,8 @@ When you restart, you need to:
 *Note that EC2 postgresql being used for images and listmanager restarts automatically*
 
 If the solr database stops working and you see:
+
     cannot open '/home/slzatz/solr-6.1.0/server/logs/solr.log' for reading: No such file or directory 
+    
 it likely means that you've somehow run out of memory and need to reboot the EC2 cloud-based server    
     
