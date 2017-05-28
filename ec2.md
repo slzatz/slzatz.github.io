@@ -1,14 +1,14 @@
-# Overview and instructions for EC2 box
+# Overview and instructions for EC2 Amazon AWS cloud-based server
 
-Note that there is a `who_am_i.txt` file
+*Note that there is a `who_am_i.txt` file*
 
-1. `test_scheduler.py` is a `flask`-based app that also depends on `apscheduler` and has a few roles with listmanager including email (using sendgrid) and twitter alarms, and incoming emails to cloudmailin that are turned into http posts and allow the user to receive an email alarm and reply to it and modify the entry which is pretty cool (although not really used at the moment)
-2. solr 6.1.0 indexes both my **Amazon Music** database for Sonos and my **listmanager** database (which is nice but right now isn't being used for much)
-3. The `postgresql`-based listmanager_p database is the database that the local sqlite versions of listmanager synch with
-4. mosquitto server that  esp_tft_mqtt.py posts messages to that are picked up by display_info.py
-5. `esp_tft_mqtt` (python3)
-6. `esp_tft_mqtt_sf2` (python3)
-7. `esp_tft_mqtt_outlook.py` (python2.7)
+- `test_scheduler.py` is a `flask`-based app that also depends on `apscheduler` and has a few roles with listmanager including email (using sendgrid) and twitter alarms, and incoming emails to cloudmailin that are turned into http posts and allow the user to receive an email alarm and reply to it and modify the entry which is pretty cool (although not really used at the moment)
+- solr 6.1.0 indexes both my **Amazon Music** database for Sonos and my **listmanager** database (which is nice but right now isn't being used for much)
+- The `postgresql`-based listmanager_p database is the database that the local sqlite versions of listmanager synch with 
+- mosquitto server that  esp_tft_mqtt.py posts messages to that are picked up by `display_info.py`
+- `esp_tft_mqtt` (python3)
+- `esp_tft_mqtt_sf2` (python3)
+- `esp_tft_mqtt_outlook.py` (python2.7)
 
 When you restart, you need to:
 
@@ -22,3 +22,7 @@ When you restart, you need to:
 
 *Note that EC2 postgresql being used for images and listmanager restarts automatically*
 
+If the solr database stops working and you see:
+    cannot open '/home/slzatz/solr-6.1.0/server/logs/solr.log' for reading: No such file or directory 
+it likely means that you've somehow run out of memory and need to reboot the EC2 cloud-based server    
+    
