@@ -6,9 +6,10 @@
 - solr 6.1.0 indexes both my **Amazon Music** database for Sonos and my **listmanager** database (which is nice but right now isn't being used for much)
 - The `postgresql`-based listmanager_p database is the database that the local sqlite versions of listmanager synch with 
 - mosquitto server that  esp_tft_mqtt.py posts messages to that are picked up by `display_info.py`
-- `esp_tft_mqtt` (python3)
-- `esp_tft_mqtt_sf2` (python3)
-- `esp_tft_mqtt_outlook.py` (python2.7)
+- `esp_tft_mqtt` (python 3.x)
+- `esp_tft_mqtt_sf2` (python 3.x)
+- `esp_tft_mqtt_outlook.py` (python 2.7)
+- `esp_tft_mqtt_photos.py` (python 2.7) - displays photos and lyrics of tracks that sonos is playing.  Relies on `sonos_track_info.py` running on a local raspi to post arist and track via which is also running on the EC2
 
 When you restart, you need to:
 
