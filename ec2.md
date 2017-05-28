@@ -1,8 +1,8 @@
 # Overview and instructions for EC2 box
 
-Note that there is a who_am_i.txt file
+Note that there is a `who_am_i.txt` file
 
-1. Running test_scheduler.py which is a flask-based app that also depends on apscheduler and  which has a f    ew roles with listmanager including email (using sendgrid) and twitter alarms, and incoming emails to cloud    mailin that are turned into http posts and allow the user to receive an email alarm and reply to it and mod    ify the entry which is pretty cool
+1. Running `test_scheduler.py` which is a flask-based app that also depends on apscheduler and  which has a f    ew roles with listmanager including email (using sendgrid) and twitter alarms, and incoming emails to cloud    mailin that are turned into http posts and allow the user to receive an email alarm and reply to it and mod    ify the entry which is pretty cool
 2. solr 6.1.0 which contains both the Amazon Music Database for Sonos and the solr listmanager data    base (which is nice but right now isn't being used for much)
 3. postgresql listmanager_p database that is the server version of listmanager and is the datab    ase that the local sqlite versions of listmanager synch with
 4. mosquitto server that  esp_tft_mqtt.py posts messages to that are picked up by display_info.py
