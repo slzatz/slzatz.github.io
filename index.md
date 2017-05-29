@@ -11,6 +11,8 @@ Will cover:
 [EC2 Box](/ec2)   
 [Raspi Sonos](/raspi_sonos)  
 [Echo Sonos Diagram](/echo_sonos_diagram)   
+[alexa_cli.py](/alexa_cli)   
+
 
 
 
