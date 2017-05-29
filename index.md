@@ -5,8 +5,7 @@ Will cover:
 - listmanger
 - echo sonos
 - display info
-
-[Github Pages](pages.github.com/)  
+ 
 [queue2solr.py](/queue2solr)  
 [Info Display](/info_display)  
 [EC2 Box](/ec2)   
