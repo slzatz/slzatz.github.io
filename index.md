@@ -6,12 +6,12 @@ Will cover:
 - echo sonos
 - display info
 
-[Github Pages](pages.github.com/) 
-[queue2solr.py](/queue2solr) 
-[Info Display](/info_display) 
-[EC2 Box](/ec2) 
-[Raspi Sonos](/raspi_sonos)
-[Echo Sonos Diagram](/echo_sonos_diagram) 
+[Github Pages](pages.github.com/)  
+[queue2solr.py](/queue2solr)  
+[Info Display](/info_display)  
+[EC2 Box](/ec2)   
+[Raspi Sonos](/raspi_sonos)  
+[Echo Sonos Diagram](/echo_sonos_diagram)   
 
 The design of Echo Sonos: ![echo sonos](img/echo_sonos7.png)
 
