@@ -1,3 +1,5 @@
+# Info Display
+
 The following scripts are important:
 
 - `display_info_photos.py`: python 2.7 (right now).  Runs on a raspi.  Dependent on pygame.
