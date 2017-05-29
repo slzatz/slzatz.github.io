@@ -13,5 +13,5 @@ Will cover:
 [Raspi Sonos](/raspi_sonos)  
 [Echo Sonos Diagram](/echo_sonos_diagram)   
 
-The design of Echo Sonos: ![echo sonos](img/echo_sonos7.png)
+
 
