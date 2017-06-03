@@ -15,8 +15,8 @@ The vagrant file:
       # Every Vagrant development environment requires a box. You can search for
       # boxes at https://atlas.hashicorp.com/search.
       config.vm.box = "ubuntu/xenial64" 
-      #config.ssh.username = "ubuntu"
-      #config.ssh.password = "python"
+      #config.ssh.username = "xxx"
+      #config.ssh.password = "xxx"
       #config.ssh.insert_key = false
       config.vm.synced_folder "vagrant/", "/home/ubuntu/vagrant"
 
