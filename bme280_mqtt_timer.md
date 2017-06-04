@@ -1,5 +1,7 @@
 ## bme280_mqtt_timer.py 
 
+*The code below was current as of June 4, 2017 but may have changed subsequently - the link below is the latest file.*
+
 [bme280_mqtt_timer.py](https://github.com/slzatz/esp8266/blob/master/bmp180_mqtt.py)
 
 ```python
