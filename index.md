@@ -14,6 +14,7 @@ Will cover:
 [alexa_cli.py](/alexa_cli)   
 [esp8266](/esp8266)   
 [esp8266 micropython vagrant](/esp8266_micropython_vagrant)
+[bme280](/bme280)   
 
 
 
