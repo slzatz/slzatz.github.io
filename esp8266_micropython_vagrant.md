@@ -2,6 +2,9 @@ Commands:
 
 ```vagrant up```
 
+Use **putty** to connect to board
+In `.vagrant\machines\default\virtualbox` is `private_key.ppk`
+
 The vagrant file:
 
     # -*- mode: ruby -*-
