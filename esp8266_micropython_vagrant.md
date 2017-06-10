@@ -1,3 +1,7 @@
+Commands:
+
+```vagrant up```
+
 The vagrant file:
 
     # -*- mode: ruby -*-
