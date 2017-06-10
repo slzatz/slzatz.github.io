@@ -2,8 +2,10 @@ Commands:
 
 ```vagrant up```
 
-Use **putty** to connect to board
-In `.vagrant\machines\default\virtualbox` is `private_key.ppk`
+1. Go into BIOS and turn on the capability to do virtualization. 
+2. Use **putty** to connect to board
+3. Use **puttygen** to transform  `private_key` in `.vagrant\machines\default\virtualbox` to a `.ppk` key: `private_key.ppk`
+4. Connect to address 127.0.0.1 port 2222 using **putty** 
 
 The vagrant file:
 
