@@ -27,5 +27,7 @@ If the solr database stops working and you see:
 
     cannot open '/home/slzatz/solr-6.1.0/server/logs/solr.log' for reading: No such file or directory 
     
-it likely means that you've somehow run out of memory and need to reboot the EC2 cloud-based server    
+it likely means that you've somehow run out of memory and need to reboot the EC2 cloud-based server 
+
+Also note that to upgrade solr it seems to involve just wget'ing the latest version, unzipping it and then moving the `sonos-companion` directory and the `listmanager` directory (which I did not do initially) located in `solr-6.xxx/server/solr` to the same place in the new solr version's directory structure.  I did not modify `solr.xml` in the same directory but some chance that I should have and will check.
     
