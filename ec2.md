@@ -18,8 +18,8 @@ When you restart, you need to:
 3. create tab and `cd ~/solr-6.1.0/bin` and `./solr start` and `sudo /etc/init.d/mosquitto start`
 4. create a `esp_tft_mqtt tab` and `cd sonos-companion` and `python3 esp_tft_mqtt.py`
 5. create a `_sf tab` and `cd sonos-companion` and `python3 esp_tft_mqtt_sf2.py`
-6. create `a_photos` tab and `python esp_tft_mqtt_photos.py`
-7. create `a _outlook` tab and `cd sonos-companion` and `python esp_tft_mqtti_outlook.py`
+6. create `a_photos` tab and `cd sonos-companion` and `python esp_tft_mqtt_photos.py`
+7. create `a _outlook` tab and `cd sonos-companion` and `python esp_tft_mqtt_outlook.py`
 
 *Note that EC2 postgresql being used for images and listmanager restarts automatically*
 
