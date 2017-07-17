@@ -96,7 +96,7 @@ git clone mylistmanager3 and sonos-companion
   6.  `sudo -H pip3 install --upgrade psycopg2`
   7.  `sudo -H pip3 install -- upgrade paho-mqtt`
 
-Need to go to cloudmailin.com with D*****## and change ip address to new server
+Need to go to cloudmailin.com and change ip address to new server
 
 **Steps for esp_tft_mqtt** 
 
