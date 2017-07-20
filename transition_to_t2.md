@@ -1,4 +1,4 @@
-Steps to create a new EC2 instance (t2.small) so that my original t1.micro instance can be retired.  My understanding is that ince t1 uses a paravirtualization volume and t2 supports only HVM that there isn't a simple migration path but even if there was, this was an opportunity to clean up some of the stuff that had accumulated over the years.
+Steps to create a new EC2 instance (t2.small) so that my original t1.micro instance can be retired.  My understanding is that since t1 uses a paravirtualization volume and t2 supports only HVM that there isn't a simple migration path but even if there was, this was an opportunity to clean up some of the stuff that had accumulated over the years.
 
 **Create a new public/private key pair**
 Logging on to an EC2 instance requires a public/private key handshake.  
@@ -9,6 +9,8 @@ Logging on to an EC2 instance requires a public/private key handshake.
 
 **Initial logon as ubuntu user**
 
+Logon as the default ubuntu user and then add user *username*:
+
     sudo adduser username
     ...
 
@@ -16,24 +18,26 @@ Add *username* to sudoers
 
     usermod -aG sudo username
 
-So can log on as *username* via putty (SSH) need to take the public key sitting in the ubuntu user in `.ssh/authorized_keys` and create `username\.ssh` and move the file there.  Need to use sudo to copy and then change the ownership to *username*.
+To make it possible to log directly into the t2 AWS instance as *username* via putty (SSH), you need to take the public key sitting in the ubuntu user in `.ssh/authorized_keys` and create `username\.ssh` and copy the file there.  Need to use sudo to copy and then change the ownership to *username*.
 
     sudo chown username authorized_keys
 
-Also changed the `username/.ssh` directory permissions to match the way the ubuntu user is configured
+Also changed the `username/.ssh` directory permissions to match the way the ubuntu user is configured:
 
     chmod 700 .ssh
 
 Then tested that I could log in with putty as *username* and that worked.
 
-    sudo apt-get install unzip (to unzip solr and to zip directories to move them [e.g. solr sonos_compantion])
+**Install some required programs/services**
+
+    sudo apt-get install unzip (to unzip solr and to zip directories to move them [e.g. solr sonos_companion])
     sudo apt-get install default-jre (needed by solr)
 
-Then installed and configed postgresql
+Install and configure postgresql:
 
     sudo apt-get install postgresql (note this installed version 9.5)
 
-Need to make some changes in postgresql config files so that *username* can access from any address and tell postgres to listen to all addresses:
+Need to make some changes in postgresql config files so that *username* can access from any address and tell postgresql to listen to all addresses:
 
     sudo -u postgres -i
 
@@ -45,32 +49,32 @@ Need to make some changes in postgresql config files so that *username* can acce
     vim /etc/postgresql/9.5/main/postgresql.conf
     listen_addresses = '0.0.0.0'
 
-Needed to create a *username* user that postgresql recognized
+Create a *username* user that postgresql recognizes:
 
     sudo -u postgres -i
     psql
     postgres=# create user username createuser password '*******';     (yes include quotes)
     CREATE ROLE
 
-returned to user *username* and did
+Then switched user to to *username* and did:
 
     sudo service postgresql stop
     sudo service postgresql start
 
 And now can do everything as *username*.
 
-Then used PG4 Admin to create a server called t2.small.
+Then used PG4 Admin on local Windows machine to create a new server called t2.small.
 
-To move databases from t1.micro to t2.small:
+Then move databases from t1.micro to t2.small by downloading the pg_dump file to the local Windows machine and then upload it to the new t2 instance using WinsSCP:
 
     pg_dump -U username artist_images > artist-images.pgsql
-    use WINSCP to move to the new server
+    [use WINSCP to move to the new server]
     use psql username=# CREATE DATABASE artist_images;
     psql -U username artist_images < artist_images.pgsql
 
 Then did the same for `listmanager_p`.
 
-To move solr:
+Move solr:
 
     wget http://www.gtlib.gatech.edu/pub/apache/lucene/solr/6.6.0/solr-6.6.0.zip
     unzip solr-X...
@@ -80,6 +84,8 @@ To move the `sonos-companion` directory and the `listmanager` directory (which I
     zip -r sonos sonos_companion
     Use winscp to move sonos.zip to local machine and then to new machine.
     unzip sonos.zip
+
+**Install more software**
 
 sudo apt-get install python3-pip
 sudo apt-get install llibffi-dev, libssl-dev (for cryptography which needed to be upgraded but had already been installed)
@@ -96,9 +102,11 @@ git clone mylistmanager3 and sonos-companion
   6.  `sudo -H pip3 install --upgrade psycopg2`
   7.  `sudo -H pip3 install -- upgrade paho-mqtt`
 
-Need to go to cloudmailin.com and change ip address to new server
+Need to go to cloudmailin.com and change ip address to new server.
 
-**Steps for esp_tft_mqtt** 
+**Steps to get esp_tft_mqtt, sf2, outlook and photos running (broadcasts info boxes that are displayed locally)** 
+
+[Note that some of these are running under python2.7 and some under python3]
 
     sudo -H pip3 install --upgrade schedule
     sudo -H pip3 install --upgrade tabulate
@@ -112,6 +120,7 @@ Need to go to cloudmailin.com and change ip address to new server
     sudo -H pip2 install --upgrade google-api-python-client (python 2.7 version for _photos)
     sudo -H pip2 install --upgrade cssselect (python 2.7 version for _photos)
     
+*Note for sf2 need to enable the new IP to access SF.*
 
 also ...
 
