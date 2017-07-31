@@ -119,6 +119,7 @@ Need to go to cloudmailin.com and change ip address to new server.
     sudo -H pip2 install psycopg2 (python 2.7 version - for _photos)
     sudo -H pip2 install --upgrade google-api-python-client (python 2.7 version for _photos)
     sudo -H pip2 install --upgrade cssselect (python 2.7 version for _photos)
+    sudo -H pip2 install --upgrade six (for _outlook)
     
 *Note for sf2 need to enable the new IP to access SF.*
 
