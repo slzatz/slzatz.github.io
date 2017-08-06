@@ -28,6 +28,8 @@ Also changed the `username/.ssh` directory permissions to match the way the ubun
 
 Then tested that I could log in with putty as *username* and that worked.
 
+On any linux machine you want to connect to the EC2, you will need to put the private key in the `~/.ssh` directory and name it `id_rsa` and `chmod 600 id_rsa` or ssh will complain that permissions are too open.
+
 **Install some required programs/services**
 
     sudo apt-get install unzip (to unzip solr and to zip directories to move them [e.g. solr sonos_companion])
