@@ -18,7 +18,7 @@ Add *username* to sudoers
 
     usermod -aG sudo username
 
-To make it possible to log directly into the t2 AWS instance as *username* via putty (SSH), you need to take the public key sitting in the ubuntu user in `.ssh/authorized_keys` and create `username\.ssh` and copy the file there.  Need to use sudo to copy and then change the ownership to *username*.
+To make it possible to log directly into the t2 AWS instance as *username* via putty (SSH), you need to take the public key sitting in the ubuntu user in `.ssh/authorized_keys` and create `username/.ssh` and copy the file there.  Need to use sudo to copy and then change the ownership to *username*.
 
     sudo chown username authorized_keys
 
