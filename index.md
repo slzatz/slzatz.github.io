@@ -4,7 +4,7 @@ Will cover:
 
 - listmanger
 - echo sonos
-- display info
+- [display_info_photos.py](/display_info_photos)
  
 [queue2solr.py](/queue2solr)  
 [Info Display](/info_display)  
