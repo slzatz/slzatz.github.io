@@ -23,8 +23,8 @@ When you restart, you need to:
 
 I automated screen in the following way:
 
-# file infoscreenrc
-# invoke with: screen -c infoscreenrc
+`# file infoscreenrc`
+`# invoke with: screen -c infoscreenrc`
 
     shell -${SHELL}
     caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"
