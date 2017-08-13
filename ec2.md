@@ -21,7 +21,35 @@ When you restart, you need to:
 6. create `a_photos` tab and `cd sonos-companion` and `python esp_tft_mqtt_photos.py`
 7. create `a _outlook` tab and `cd sonos-companion` and `python esp_tft_mqtt_outlook.py`
 
-*Note that EC2 postgresql being used for images and listmanager restarts automatically*
+I automated screen in the following way:
+
+# file infoscreenrc
+# invoke with: screen -c infoscreenrc
+
+    shell -${SHELL}
+    caption always "%?%{ Wk}%-Lw%?%{Rk}%n*%f %t%?(%u)%?%?%{Wk}%+Lw%? %{Rk}%=%c %{rk}%d/%M/%Y"
+    defscrollback 1024
+    startup_message off
+    hardstatus on
+    hardstatus alwayslastline
+
+    chdir mylistmanager3
+    screen -t test_scheduler
+    stuff "python3 test_scheduler.py"
+    chdir ../sonos-companion
+    screen -t esp_tft_mqtt
+    stuff "python3 esp_tft_mqtt.py"
+    screen -t _sf
+    stuff "python3 esp_tft_mqtt_sf2.py"
+    screen -t _photos
+    stuff "python esp_tft_mqtt_photos.py"
+    screen -t _outlook
+    stuff "python esp_tft_mqtt_outlook.py"
+    chdir ../solr-6.6.0/bin
+    screen -t bash
+    stuff "./solr start && echo you need to sudo /etc/init.d/mosquitto start"
+
+*Note that postgresql is being used for images (artist_images.db); postgresql restarts automatically*
 
 If the solr database stops working and you see:
 
