@@ -8,6 +8,8 @@ The scripts that are needed include:
 2. `flask_ask_zmq.py` (python 2.7) - `flask_ask_sonos.py` and `alexa_cli.py` depend on this script to interact with sonos.
 3. `sonos_track_info.py` (python 2.7) broadcasts track information
 4. `./ngrok start flask ssh`
-5. `esp_check_mqtt.py` (python 2.7) - listening on sonos/{location} for commands issued by `sonos_remote.py` running on esp8266
+5. `esp_check_mqtt.py` (python 2.7)
+    1. This is a python 2.7 program that currently runs on a raspberry pi and is connected to sonos so it can issue sonos commands like changing the volume and pausing the music
+    2. This script subscribes to mqtt messages issued from esp8266 running the script `sonos_remote.py` using the topic `sonos/{location}` and sent to an mqtt broker running on ec2 instance 
 
 Notes: mqtt should have been installed by sudo apt-get ...
