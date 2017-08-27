@@ -14,10 +14,13 @@ These scripts currently run on a local raspberry pi. They are all python 2.7 scr
     1. Script receives task dictionaries via json from `flask_ask_sonos.py`.  
     2. Also carries out the tasks created by `alexa_cli.py`
 3. `sonos_track_info.py`
-    1. Broadcasts track information via mqtt
-4. `./ngrok start flask ssh`
-5. `esp_check_mqtt.py`
+    1. Broadcasts track information via ec2 mqtt broker
+    2. sonos_track_topic = 'sonos/{}/track'.format(location)
+    3. sonos_status_topic = 'sonos/{}/status'.format(location)
+    4. sonos_volume_topic = 'sonos/{}/volume'.format(location)
+4. `esp_check_mqtt.py`
     1. This script subscribes to mqtt messages issued from esp8266 running the script `sonos_remote.py` using the topic `sonos/{location}` and sent to an mqtt broker running on ec2 instance 
     2.  Supports commands like changing the volume and pausing the music
+5. `./ngrok start flask ssh`
 
 Notes: mqtt should have been installed by sudo apt-get ...
