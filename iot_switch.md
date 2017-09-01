@@ -23,10 +23,10 @@ The AWS lambda function is very simple:
     import os
     from config import aws_mqtt_uri
     
-    topic = os.environ\['topic'\]
+    topic = os.environ['topic']
     
     try:
-        msg = os.environ\['message'\]
+        msg = os.environ['message']
     except Exception:
         msg = ''
         
