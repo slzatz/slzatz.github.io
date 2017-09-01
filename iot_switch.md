@@ -10,7 +10,28 @@ This project used:
 A few other points:
 - MQTT topic is *switch*
 - The Lambda event that is triggered by AWS IoT button includes the clickType, which can be SINGLE, DOUBLE or LONG
-- The
-- The`iot_switch` script interprets a single click as *on* and double-click as *off*
-- The Lambda function sends some additional info besides the type of click to the Feather to be displayed on the Feather Wing OLED:
-  - A 
+- The IoT generated event also includes the battery state and the serial number and I added a text message
+- The Lambda function posts a json formatted string to the MQTT broker running on EC2
+- The`iot_switch` script interprets a single click as *on* and double-click as *off* and sets digital pin 15 of the ESP8266 either high or low based on the click type
+- The information displayed on the Feather Wing OLED is the text message, the click type and the battery state
+- The current application for all this is to turn on the electric kettle from upstairs when we wake up so the water is hot by the time we come downstairs (yes, that will no doubt contribute to world peace)
+
+The AWS lambda function is very simple:
+
+    import paho.mqtt.publish as mqtt_publish
+    import json
+    import os
+    from config import aws_mqtt_uri
+    
+    topic = os.environ\['topic'\]
+    
+    try:
+        msg = os.environ\['message'\]
+    except Exception:
+        msg = ''
+        
+    def lambda_handler(event, context):
+        event.update({'message':msg'})
+        mqtt_publish.single(topic, json.dumps(event), hostname=aws_mqtt_uri)
+        
+        
