@@ -14,6 +14,7 @@ A few other points:
 - The Lambda function posts a json formatted string to the MQTT broker running on EC2
 - The`iot_switch` script interprets a single click as *on* and double-click as *off* and sets digital pin 15 of the ESP8266 either high or low based on the click type
 - The information displayed on the Feather Wing OLED is the text message, the click type and the battery state
+- At the moment I am using Lambda environment variables to set the topic and for the optional message
 - The current application for all this is to turn on the electric kettle from upstairs when we wake up so the water is hot by the time we come downstairs (yes, that will no doubt contribute to world peace)
 
 The AWS lambda function is very simple:
