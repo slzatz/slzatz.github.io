@@ -36,3 +36,4 @@ The AWS lambda function is very simple:
         mqtt_publish.single(topic, json.dumps(event), hostname=aws_mqtt_uri)
         
         
+The Python script running on the esp8266:  [iot_switch.py](https://github.com/slzatz/esp8266/blob/master/iot_switch.py)
