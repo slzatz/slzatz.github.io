@@ -5,6 +5,7 @@ Will cover:
 - listmanger
 - echo sonos
 - [display_info_photos.py](/display_info_photos)
+- [IoT Switch](/iot_switch)
  
 [queue2solr.py](/queue2solr)  
 [Info Display](/info_display)  
