@@ -16,6 +16,7 @@ Will cover:
 [esp8266](/esp8266)   
 [esp8266 micropython vagrant](/esp8266_micropython_vagrant)  
 [bme280_mqtt_timer](/bme280_mqtt_timer)  
+[IoT Hello World!]/(iot_hello_world)
 
 [Transition to AWS t2](/transition_to_t2)
 
