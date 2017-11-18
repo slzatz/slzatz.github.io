@@ -16,7 +16,7 @@ The Adafruit drive supports the hardware I2C although I think that has been corr
 
 The Adafruit driver is at:
 
-[Adafruit SSD1306 driver](https://github.com/adafruit/micropython-adafruit-ssd1306)
+[Adafruit SSD1306 driver](https://github.com/adafruit/micropython-adafruit-ssd1306/blob/master/ssd1306.py)
 
 I renamed that Adafruit SSD1306 driver to `ssd1306_i2c.py` and used ampy to put in on the board. 
 
