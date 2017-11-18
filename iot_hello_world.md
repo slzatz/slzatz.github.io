@@ -20,6 +20,10 @@ The Adafruit driver is at:
 
 I renamed that Adafruit SSD1306 driver to `ssd1306_i2c.py` and used ampy to put in on the board. 
 
-I used pullups (10k) on BAT because it was eaier to reach to SCL and SDA although probably should actually be connected to 3V3. 
+I used pullups (10k) on BAT because it was eaier to reach to SCL and SDA although probably should actually be connected to 3V3.
+
+Here are a few photos of the setup: 
+
+![iot photo #1](img/iot_hello_world_1.jpeg)
 
 
