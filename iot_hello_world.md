@@ -8,7 +8,7 @@ I am using the @loboris port of MicroPython for the ESP32.
 
 The script that runs on the ESP32 is: 
 
-[iot_generic_esp32.py](https://github.com/slzatz/esp8266/blob/35f7870e3fc59c022074014b50480e0a1f887c94/iot_generic_esp32.py)
+[iot_generic_esp32.py](https://github.com/slzatz/esp8266/blob/master/iot_generic_esp32.py)
 
 It is necessary to put pull-ups on the ESP32 IC2 pins since the Adafruit ESP32 Feather doesn't have them/
 
