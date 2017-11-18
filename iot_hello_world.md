@@ -26,4 +26,10 @@ Here are a few photos of the setup:
 
 ![iot photo #1](img/iot_hello_world_1.jpeg)
 
+And in the picture below, you can see the pullup resistors connect to BAT.
+
+![iot photo #2](img/iot_hello_world_2.jpeg)
+
+
+
 
